@@ -15,8 +15,7 @@ Search the inventory for »quartzy«.
 Unzip the downloaded folder and rename it to »quartzy« (if necessary). Copy the folder into your »luanti/mods« folder. 
 
 **DEPENDS:**
-This mod requires »default« (»[minetest_game](https://content.luanti.org/packages/Minetest/minetest_game/)«) to work correctly.
-
+This mod requires »default« (»[minetest_game](https://content.luanti.org/packages/Minetest/minetest_game/)«) to work correctly. Optional dependency mod »stairsplus« (included in the mod »[moreblocks](https://content.minetest.net/packages/Calinou/moreblocks/)«)  
 
 **LICENSE:**  
 Author: This mod was made by [Norbert Thien, multimediamobil – Region Süd (mmmsued)](https://minetest-modding.weebly.com/), 2025   
