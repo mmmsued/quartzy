@@ -4,20 +4,20 @@
 
 local setting_for_inventory = tonumber(minetest.settings:get("quartzy_disable_for_inventory") or 1)
 
-local definition = {								-- Beginn verschachtelte Tabelle für Quartzy Chiseled
-	{"quartzy_chiseled_white", "Chiseled white"}, 	-- 1. Eintrag der Unter-Tabelle für Node-Name, Textur, Rezept - 2. Eintrag für Description
-    {"quartzy_chiseled_light_gray", "Chiseled light gray"},
-	{"quartzy_chiseled_gray", "Chiseled gray"},
-	{"quartzy_chiseled_dark_gray", "Chiseled dark gray"},
-	{"quartzy_chiseled_pink", "Chiseled pink"},
-	{"quartzy_chiseled_dark_pink", "Chiseled dark pink"}
-} 													-- Ende verschachtelte Tabelle »definition«
+local definition = {    					-- Beginn verschachtelte Tabelle für Quartzy Plain
+	{"quartzy_plain_white", "Plain white"}, -- 1. Eintrag der Unter-Tabelle für Node-Name, Textur, Rezept - 2. Eintrag für Description
+	{"quartzy_plain_light_gray", "Plain light gray"},
+	{"quartzy_plain_gray", "Plain gray"},
+	{"quartzy_plain_dark_gray", "Plain dark gray"},
+	{"quartzy_plain_pink", "Plain pink"},
+	{"quartzy_plain_dark_pink", "Plain dark pink"}
+}											-- Ende verschachtelte Tabelle »definition«
 
-local name = "" 		-- lokale Variablen, die später in der for-Schleife benötigt werden
-local description = ""	-- lokale Variablen, die später in der for-Schleife benötigt werden
+local name = "" 		-- lokale Variable, die später in der for-Schleife die obige Tabelle »definition« ausliest
+local description = ""	-- lokale Variable, die später in der for-Schleife die obige Tabelle »definition« ausliest
 
 
-for _, row in ipairs(definition) do -- Schleife zum Auslesen der Tabelle »definition«, _ (Unterstrich): übliches formales Vorgehen, wenn ein Rückgabewert nicht benötigt wird, aber abgefangen werden muss
+for _, row in ipairs(definition) do -- Schleife zum Auslesen der Tabelle »definition«
 
 	name = row[1]			-- ersten Eintrag aus der inneren Tabelle »definition« auslesen und der lokalen Variable »name« zuweisen
 	description = row[2]	-- zweiten Eintrag aus der inneren Tabelle »definition« auslesen und der lokalen Variable »description« zuweisen
@@ -26,7 +26,7 @@ for _, row in ipairs(definition) do -- Schleife zum Auslesen der Tabelle »defin
 		description = "Quartzy " .. description,	-- zusammengesetzte Beschreibung generieren
 		drawtype = "nodebox",
 		tiles = {
-			name .. "_top.png", name .. "_top.png", name .. "_side.png"	-- zusammengesetzten Textur-Namen generieren
+			name .. ".png"		-- zusammengesetzten Textur-Namen generieren
 		},
 		paramtype2 = "facedir",	-- macht Objekt mit Schraubendreher rotierbar und richtet -Z-Seite beim Ablegen immer in Richtung des Ablegenden
 		groups = {
@@ -43,7 +43,7 @@ for _, row in ipairs(definition) do -- Schleife zum Auslesen der Tabelle »defin
             description = "Quartzy " .. description,					-- zusammengesetzte Beschreibung generieren
 			drawtype = "nodebox",
 			tiles = {
-				name .. "_top.png", name .. "_top.png", name .. "_side.png"	-- zusammengesetzten Textur-Namen generieren
+				name .. ".png"		-- zusammengesetzten Textur-Namen generieren
 			},
 			paramtype = "light",	-- verhindert u. a. fehlerhafte Lichtberechnung bei Quadern ohne Kantenlänge 1x1x1. Nachteil: Block wird insgesamt lichtdurchlässing
 			paramtype2 = "facedir",	-- macht Objekt mit Schraubendreher rotierbar und richtet -Z-Seite beim Ablegen immer in Richtung des Ablegenden
@@ -58,12 +58,12 @@ for _, row in ipairs(definition) do -- Schleife zum Auslesen der Tabelle »defin
 end     -- Ende for-Schleife (Start in Zeile 20)
 
 
--- Rezepte für »Quartzy Chiseled« herstellen
-local crafting_array = {    					-- Beginn verschachtelte Tabelle für »Quartzy Chiseled«-Rezepte
-	{"", "", "quartzy:quartzy_raw"},
+-- Rezepte für »Quartzy Plain« herstellen
+local crafting_array = {    					-- Beginn verschachtelte Tabelle für »Quartzy Plain«-Rezepte
+	{"quartzy:quartzy_raw", "", ""},
 	{"", "", ""},
 	{"", "", ""}
-}												-- Ende verschachtelte Tabelle für »Quartzy Chiseled«-Rezepte
+}												-- Ende verschachtelte Tabelle für »Quartzy Plain«-Rezepte
 
 local crafting_input = "quartzy:quartzy_raw" 	-- lokale Variable, die später in der inneren for-Schleife neuen Wert in Tabelle »crafting_array« setzt
 local crafting_index = 2 						-- lokale Variable, die später in der for-Schleife die obige Tabelle »crafting_array« ansteuert
