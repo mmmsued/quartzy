@@ -1,0 +1,41 @@
+# textdomain: quartzy
+
+
+### init.lua ###
+Quartzy Raw=
+
+
+### quartzy_brick.lua ###
+Quartzy Brick white=
+Quartzy Brick light gray=
+Quartzy Brick gray=
+Quartzy Brick dark gray=
+Quartzy Brick pink=
+Quartzy Brick dark pink=
+
+
+### quartzy_chiseled.lua ###
+Quartzy Chiseled white=
+Quartzy Chiseled light gray=
+Quartzy Chiseled gray=
+Quartzy Chiseled dark gray=
+Quartzy Chiseled pink=
+Quartzy Chiseled dark pink=
+
+
+### quartzy_pillar.lua ###
+Quartzy Pillar white=
+Quartzy Pillar light gray=
+Quartzy Pillar gray=
+Quartzy Pillar dark gray=
+Quartzy Pillar pink=
+Quartzy Pillar dark pink=
+
+
+### quartzy_plain.lua ###
+Quartzy Plain white=
+Quartzy Plain light gray=
+Quartzy Plain gray=
+Quartzy Plain dark gray=
+Quartzy Plain pink=
+Quartzy Plain dark pink=

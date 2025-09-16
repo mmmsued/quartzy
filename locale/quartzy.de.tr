@@ -1,0 +1,41 @@
+# textdomain: quartzy
+
+
+### init.lua ###
+Quartzy Raw=Quarz Rohmaterial
+
+
+### quartzy_brick.lua ###
+Quartzy Brick white=Quarz Ziegel weiß
+Quartzy Brick light gray=Quarz Ziegel hellgrau
+Quartzy Brick gray=Quarz Ziegel grau
+Quartzy Brick dark gray=Quarz Ziegel dunkelgrau
+Quartzy Brick pink=Quarz Ziegel rosa
+Quartzy Brick dark pink=Quarz Ziegel dunkelrosa
+
+
+### quartzy_chiseled.lua ###
+Quartzy Chiseled white=Quarz gemeißelt weiß
+Quartzy Chiseled light gray=Quarz gemeißelt hellgrau
+Quartzy Chiseled gray=Quarz gemeißelt grau
+Quartzy Chiseled dark gray=Quarz gemeißelt dunkelgrau
+Quartzy Chiseled pink=Quarz gemeißelt rosa
+Quartzy Chiseled dark pink=Quarz gemeißelt dunkelrosa
+
+
+### quartzy_pillar.lua ###
+Quartzy Pillar white=Quarz Säule weiß
+Quartzy Pillar light gray=Quarz Säule hellgrau
+Quartzy Pillar gray=Quarz Säule grau
+Quartzy Pillar dark gray=Quarz Säule dunkelgrau
+Quartzy Pillar pink=Quarz Säule rosa
+Quartzy Pillar dark pink=Quarz Säule dunkelrosa
+
+
+### quartzy_plain.lua ###
+Quartzy Plain white=Quarz Kachel weiß
+Quartzy Plain light gray=Quarz Kachel hellgrau
+Quartzy Plain gray=Quarz Kachel grau
+Quartzy Plain dark gray=Quarz Kachel dunkelgrau
+Quartzy Plain pink=Quarz Kachel rosa
+Quartzy Plain dark pink=Quarz Kachel dunkelrosa
