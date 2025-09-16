@@ -8,7 +8,7 @@ The mod »Quartzy« (quartzy) adds some quartz blocks to Minetest/Luanti.
 
 
 **USE:**
-Search the inventory for »quartzy«.  
+Search the inventory for »quartzy« and have fun building with quartz.  
 
 
 **INSTALL:**
