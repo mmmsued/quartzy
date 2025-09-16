@@ -2,9 +2,10 @@
 -- Code: Except otherwise specified, all code in this project is licensed as LGPLv3.
 -- Media: Except otherwise specified, all media and any other content in this project which is not source code is licensed as CC BY SA 3.0. 
 
+local S = minetest.get_translator("quartzy")
 local setting_for_inventory = tonumber(minetest.settings:get("quartzy_disable_for_inventory") or 1)
 
-local definition = {    					-- Beginn verschachtelte Tabelle für Quartzy Plain
+local definition = {    					-- Beginn verschachtelte Tabelle »definition« für »Quartzy Plain«
 	{"quartzy_plain_white", "Plain white"}, -- 1. Eintrag der Unter-Tabelle für Node-Name, Textur, Rezept - 2. Eintrag für Description
 	{"quartzy_plain_light_gray", "Plain light gray"},
 	{"quartzy_plain_gray", "Plain gray"},
@@ -23,7 +24,7 @@ for _, row in ipairs(definition) do -- Schleife zum Auslesen der Tabelle »defin
 	description = row[2]	-- zweiten Eintrag aus der inneren Tabelle »definition« auslesen und der lokalen Variable »description« zuweisen
 
 	minetest.register_node("quartzy:" .. name, {	-- zusammengesetzten Node-Namen generieren
-		description = "Quartzy " .. description,	-- zusammengesetzte Beschreibung generieren
+		description = S("Quartzy " .. description),	-- zusammengesetzte Beschreibung generieren
 		drawtype = "nodebox",
 		tiles = {
 			name .. ".png"		-- zusammengesetzten Textur-Namen generieren
@@ -54,8 +55,8 @@ for _, row in ipairs(definition) do -- Schleife zum Auslesen der Tabelle »defin
 		    },
 			sounds = default.node_sound_stone_defaults()
 	    })
-	end -- Ende der if-Abfrage zu minetest.get_modpath() - Start in Zeile 41
-end     -- Ende for-Schleife (Start in Zeile 20)
+	end -- Ende der if-Abfrage zu minetest.get_modpath() - Start in Zeile 42
+end     -- Ende for-Schleife (Start in Zeile 21)
 
 
 -- Rezepte für »Quartzy Plain« herstellen

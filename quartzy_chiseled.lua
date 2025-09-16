@@ -2,9 +2,10 @@
 -- Code: Except otherwise specified, all code in this project is licensed as LGPLv3.
 -- Media: Except otherwise specified, all media and any other content in this project which is not source code is licensed as CC BY SA 3.0. 
 
+local S = minetest.get_translator("quartzy")
 local setting_for_inventory = tonumber(minetest.settings:get("quartzy_disable_for_inventory") or 1)
 
-local definition = {								-- Beginn verschachtelte Tabelle für Quartzy Chiseled
+local definition = {								-- Beginn verschachtelte Tabelle »definition« für »Quartzy Chiseled«
 	{"quartzy_chiseled_white", "Chiseled white"}, 	-- 1. Eintrag der Unter-Tabelle für Node-Name, Textur, Rezept - 2. Eintrag für Description
     {"quartzy_chiseled_light_gray", "Chiseled light gray"},
 	{"quartzy_chiseled_gray", "Chiseled gray"},
@@ -23,7 +24,7 @@ for _, row in ipairs(definition) do -- Schleife zum Auslesen der Tabelle »defin
 	description = row[2]	-- zweiten Eintrag aus der inneren Tabelle »definition« auslesen und der lokalen Variable »description« zuweisen
 
 	minetest.register_node("quartzy:" .. name, {	-- zusammengesetzten Node-Namen generieren
-		description = "Quartzy " .. description,	-- zusammengesetzte Beschreibung generieren
+		description = S("Quartzy " .. description),	-- zusammengesetzte Beschreibung generieren
 		drawtype = "nodebox",
 		tiles = {
 			name .. "_top.png", name .. "_top.png", name .. "_side.png"	-- zusammengesetzten Textur-Namen generieren
@@ -40,7 +41,7 @@ for _, row in ipairs(definition) do -- Schleife zum Auslesen der Tabelle »defin
     -- Zugriff auf den Mod »moreblocks« (genauer auf »stairsplus« - siehe dort »API.md«) - in der »mod.conf« muss »optional_depends = moreblocks« stehen
 	if minetest.get_modpath("moreblocks") then
 	    stairsplus:register_all("quartzy", name, "quartzy:" .. name, {	-- zusammengesetzte Namen generieren
-            description = "Quartzy " .. description,					-- zusammengesetzte Beschreibung generieren
+            description = S("Quartzy " .. description),					-- zusammengesetzte Beschreibung generieren
 			drawtype = "nodebox",
 			tiles = {
 				name .. "_top.png", name .. "_top.png", name .. "_side.png"	-- zusammengesetzten Textur-Namen generieren
@@ -54,8 +55,8 @@ for _, row in ipairs(definition) do -- Schleife zum Auslesen der Tabelle »defin
 		    },
 			sounds = default.node_sound_stone_defaults()
 	    })
-	end -- Ende der if-Abfrage zu minetest.get_modpath() - Start in Zeile 41
-end     -- Ende for-Schleife (Start in Zeile 20)
+	end -- Ende der if-Abfrage zu minetest.get_modpath() - Start in Zeile 42
+end     -- Ende for-Schleife (Start in Zeile 21)
 
 
 -- Rezepte für »Quartzy Chiseled« herstellen
