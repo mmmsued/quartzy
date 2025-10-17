@@ -1,3 +1,2 @@
 # Set this to 0 if you want to see all blocks made by the stairsplus mod from the modpack moreblocks
-
 quartzy_disable_for_inventory (No Creative Quartzy Saw) int 1
